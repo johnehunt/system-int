@@ -20,3 +20,4 @@ bin-release/
 /target
 *.iml
 /03-graphql-services/target/classes/
+/02-shop-microservice/target/classes/
