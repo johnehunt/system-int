@@ -21,3 +21,4 @@ bin-release/
 *.iml
 /03-graphql-services/target/classes/
 /02-shop-microservice/target/classes/
+/01-restful-services/target/classes/META-INF/
