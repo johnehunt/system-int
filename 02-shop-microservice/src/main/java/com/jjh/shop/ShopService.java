@@ -19,6 +19,7 @@ public class ShopService {
 
         SpringApplication.run(ShopService.class, args);
         System.out.println("Shop Service started");
+        System.out.println("See - http://localhost:3333/");
     }
 
     @LoadBalanced    // Make sure to create the load-balanced template
