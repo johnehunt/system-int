@@ -10,15 +10,15 @@ import graphql.kickstart.tools.GraphQLQueryResolver;
 @Component
 public class BooksQueryResolver implements GraphQLQueryResolver {
 	
-	private Bookshop bookDao;
+	private Bookshop bookshop;
 
 	@Autowired
 	public BooksQueryResolver(Bookshop bookDao) {
-		this.bookDao = bookDao;
+		this.bookshop = bookDao;
 	}
 
 	public List<Book> getBooks(int count) {
 		System.out.println("Query.getBooks(" + count + ")");
-		return bookDao.getBooks(count);
+		return bookshop.getBooks(count);
 	}
 }

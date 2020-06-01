@@ -9,15 +9,15 @@ import graphql.kickstart.tools.GraphQLResolver;
 
 @Component
 public class AuthorQueryResolver implements GraphQLResolver<Author> {
-	private Bookshop bookDao;
+	private Bookshop bookshop;
 
 	@Autowired
-	public AuthorQueryResolver(Bookshop bookDao) {
-		this.bookDao = bookDao;
+	public AuthorQueryResolver(Bookshop bookshop) {
+		this.bookshop = bookshop;
 	}
 
 	public List<Book> getBooks(Author author) {
 		System.out.println("AuthorResolver.getBooks(" + author + ")");
-		return bookDao.getAuthorBooks(author.getId());
+		return bookshop.getAuthorBooks(author.getId());
 	}
 }
