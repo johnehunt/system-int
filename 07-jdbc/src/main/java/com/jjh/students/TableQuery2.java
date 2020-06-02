@@ -16,7 +16,9 @@ public class TableQuery2 {
             Statement st = conn.createStatement();
             ResultSet rs = st.executeQuery("SELECT * FROM students");
             while (rs.next()) {
-                System.out.println("name: " + rs.getString("name") );
+                System.out.print("id: " + rs.getInt("id"));
+                System.out.print(", name: " + rs.getString("name") );
+                System.out.println(", subject: " + rs.getString("subject") );
             }
         } catch (SQLException e) {
             e.printStackTrace();
