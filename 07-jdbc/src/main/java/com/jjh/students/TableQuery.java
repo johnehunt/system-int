@@ -8,9 +8,10 @@ import java.sql.Statement;
 
 public class TableQuery {
 	public static void main(String [] args) {
-		try {
-            String url = "jdbc:mysql://localhost/uni-database";
-            Connection conn = DriverManager.getConnection(url,"user", "user123");
+		String user = "user";
+		String pwd = "user123";
+		String url = "jdbc:mysql://localhost/uni-database";
+		try (Connection conn = DriverManager.getConnection(url,user,pwd)) {
 			Statement st = conn.createStatement();
 			ResultSet rs = st.executeQuery("SELECT * FROM students");
 			int cols = rs.getMetaData().getColumnCount();
