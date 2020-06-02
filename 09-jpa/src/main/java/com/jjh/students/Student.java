@@ -9,7 +9,6 @@ import javax.persistence.Table;
 @Table(name="students")
 public class Student {
 	
-	
 	@Id
 	// @GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
@@ -19,8 +18,7 @@ public class Student {
 	private String subject;
 	private String email;
 	
-	public Student() {
-	}
+	public Student() { } // Required by JPA
 	
 	public Student(int id, String name, String surname, String subject, String email) {
 		this.id = id;
@@ -60,8 +58,15 @@ public class Student {
 	public int getId() {
 		return this.id;
 	}
-	
+
+	@Override
 	public String toString() {
-		return "Student(" + name + ", " + id + ")";
+		return "Student{" +
+				"id=" + id +
+				", name='" + name + '\'' +
+				", surname='" + surname + '\'' +
+				", subject='" + subject + '\'' +
+				", email='" + email + '\'' +
+				'}';
 	}
 }
