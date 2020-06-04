@@ -11,8 +11,8 @@ public class BookMutationResolver implements GraphQLMutationResolver {
 	private Bookshop bookshop;
 
 	@Autowired
-	public BookMutationResolver(Bookshop bookDao) {
-		this.bookshop = bookDao;
+	public BookMutationResolver(Bookshop bookshop) {
+		this.bookshop = bookshop;
 	}
 
 	public Book writeBook(String isbn, String title, String category, String author) {
