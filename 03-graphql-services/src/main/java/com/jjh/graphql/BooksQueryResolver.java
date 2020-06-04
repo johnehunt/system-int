@@ -13,8 +13,8 @@ public class BooksQueryResolver implements GraphQLQueryResolver {
 	private Bookshop bookshop;
 
 	@Autowired
-	public BooksQueryResolver(Bookshop bookDao) {
-		this.bookshop = bookDao;
+	public BooksQueryResolver(Bookshop bookshop) {
+		this.bookshop = bookshop;
 	}
 
 	public List<Book> getBooks(int count) {
