@@ -7,7 +7,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.3.0.RELEASE</version>
+        <version>2.4.0</version>
         <relativePath /> <!-- lookup parent from repository -->
     </parent>
 
@@ -15,10 +15,13 @@
     <artifactId>01-restful-services</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <name>test</name>
+    <name>restful-services</name>
     <description>Demo Rest project for Spring Boot</description>
+
     <properties>
-        <java.version>1.8</java.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.target>11</maven.compiler.target>
+        <maven.compiler.source>11</maven.compiler.source>
     </properties>
 
     <dependencies>
@@ -35,6 +38,7 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
     </dependencies>
+
     <build>
         <plugins>
             <plugin>

@@ -29,7 +29,7 @@ public class UserController {
 	@GetMapping("user/{name}")
 	public User getUser(@PathVariable String name) {
 		System.out.println("UserController.getUser(" + name + ")");
-		User user = new User(name, 54);
+		User user = new User(name, 55);
 		return user;
 	}
 
