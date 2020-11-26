@@ -5,7 +5,7 @@ public class User {
 	private int age;
 	private String title = "Mr";
 	
-	public User() {} // Need for sending data to the service
+	public User() {} // Needed for sending data to the service
 
 	public User(String name, int age) {
 		this.name = name;
