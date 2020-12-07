@@ -8,7 +8,7 @@ public class CreateConnection {
 	public static void main(String[] args) {
 		String user = "user";
 		String pwd = "user123";
-		String url = "jdbc:mysql://localhost/uni-database";
+		String url = "jdbc:mysql://localhost/coursedb";
 
 		Connection conn = null;
 		try {

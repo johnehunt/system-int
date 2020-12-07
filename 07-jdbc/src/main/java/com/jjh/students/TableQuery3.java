@@ -8,7 +8,7 @@ public class TableQuery3 {
     public static void main(String [] args) {
         String user = "user";
         String pwd = "user123";
-        String url = "jdbc:mysql://localhost/uni-database";
+        String url = "jdbc:mysql://localhost/coursedb";
         List<Student> students = new ArrayList<>();
         try (Connection conn = DriverManager.getConnection(url,user,pwd)) {
             Statement st = conn.createStatement();

@@ -9,7 +9,7 @@ public class CreateConnection2 {
     public static void main(String[] args) {
         String user = "user";
         String pwd = "user123";
-        String url = "jdbc:mysql://localhost/uni-database";
+        String url = "jdbc:mysql://localhost/coursedb";
         try (Connection conn = DriverManager.getConnection(url,user,pwd)) {
             System.out.println("Connection set up: " + conn);
         } catch (SQLException exp) {

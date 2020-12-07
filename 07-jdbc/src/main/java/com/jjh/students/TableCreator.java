@@ -9,7 +9,7 @@ public class TableCreator {
 	public static void main(String[] args) {
 		String user = "user";
 		String pwd = "user123";
-		String url = "jdbc:mysql://localhost/uni-database";
+		String url = "jdbc:mysql://localhost/coursedb";
 		try (Connection conn = DriverManager.getConnection(url,user,pwd)) {
 			Statement st = conn.createStatement();
 			st.executeUpdate("CREATE TABLE addresses (name char(15), address char(3))");
