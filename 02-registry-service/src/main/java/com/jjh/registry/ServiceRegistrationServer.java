@@ -15,16 +15,17 @@ public class ServiceRegistrationServer {
     public static void main(String[] args) {
         // Should be run first
         System.out.println("Starting Registration Server");
-        // Tell Boot to look for registration-server.yml
+        // Tell Spring Boot to look for registration-server.yml
         System.setProperty("spring.config.name", "registration-server");
         SpringApplication.run(ServiceRegistrationServer.class, args);
         System.out.println("Registration Server Started");
-        System.out.println("See - http://localhost:1111/");
+        System.out.println("\tSee - http://localhost:1111/");
     }
 
     @ConditionalOnMissingBean
     @Bean
     public HttpTraceRepository httpTraceRepository() {
+        System.out.println("ServiceRegistrationServer.httpTraceRepository()");
         return new InMemoryHttpTraceRepository();
     }
 }
