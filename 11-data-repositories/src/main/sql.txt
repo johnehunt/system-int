@@ -1,0 +1,24 @@
+CREATE DATABASE `bookstore`;
+
+GRANT ALL PRIVILEGES ON bookstore.* TO 'user'@'localhost';
+
+USE bookstore;
+
+
+DROP TABLE IF EXISTS `books`;
+CREATE TABLE `books` (
+  `isbn` varchar(45) NOT NULL,
+  `author` varchar(45) DEFAULT NULL,
+  `title` varchar(45) NOT NULL,
+  `price` decimal(2,0) DEFAULT NULL,
+  `publisher` varchar(45) DEFAULT 'Techno Books Ltd.',
+  PRIMARY KEY (`isbn`)
+);
+
+INSERT INTO `books` VALUES ('1','John Smith','Java Overview',13,'Techno Books Ltd.'),
+                           ('2','Jasmine Andrews','Java Unleashed',12,'Techno Books Ltd.'),
+                           ('3','Adam Jones','JQuery Today',14,'Wizzo Publishers'),
+                           ('321','Billy Smith','The way home',12,'Techno Books Ltd.'),
+                           ('4','Denise Byrne','JavaScript Live',15,'Techno Books Ltd.'),
+                           ('5','Phoebe Richmond','Python',26,'Wizzo Publishers'),
+                           ('6','Gryff Pritchard','Kotlin Introduction',13,'Techno Books Ltd.');

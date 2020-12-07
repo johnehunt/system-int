@@ -16,15 +16,17 @@ public class App {
 
 		BookRepository repository = context.getBean(BookRepository.class);
 
+		System.out.println("FindAll books");
 		Iterable<Book> books = repository.findAll();
 		System.out.println("books: " + books);
 
 		Book book = new Book("10", "Java and Spring", "John Smith", 12.55);
+		System.out.printf("Save a new book %s", book);
 		repository.save(book);
 
 		System.out.println("Check book with ISBN 10 is in database");
 		Optional<Book> optionalBook = repository.findById("10");
-		System.out.print(optionalBook);
+		System.out.println(optionalBook);
 
 		System.out.println("Delete Book just Added");
 		repository.deleteById("10");
