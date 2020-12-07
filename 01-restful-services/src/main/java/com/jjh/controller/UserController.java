@@ -13,7 +13,7 @@ import com.jjh.domain.User;
 @RestController
 @RequestMapping("users")
 public class UserController {
-	private List<User> users = new ArrayList<>();
+	private final List<User> users = new ArrayList<>();
 
 	public UserController() {
 		System.out.println("UserController.<cons>()");
@@ -29,8 +29,7 @@ public class UserController {
 	@GetMapping("user/{name}")
 	public User getUser(@PathVariable String name) {
 		System.out.println("UserController.getUser(" + name + ")");
-		User user = new User(name, 55);
-		return user;
+		return new User(name, 56);
 	}
 
 	// http://localhost:8080/users/list
