@@ -11,7 +11,7 @@ public class BookshopGQLApp extends SpringBootServletInitializer {
 		System.out.println("Starting App setup");
 		SpringApplication.run(BookshopGQLApp.class, args);
 		System.out.println("Setup finished");
-		System.out.println("Access: http://localhost:8080/graphiql");
+		System.out.println("\tAccess: http://localhost:8080/graphiql");
 	}
 
 
