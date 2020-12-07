@@ -15,6 +15,7 @@ public class App {
 		EntityManager em = emf.createEntityManager();
 		System.out.println(em);
 
+		// Will cause a new table to be added if not already present
 		Module m = new Module(1, "OPP");
 		em.getTransaction().begin();
 		em.persist(m);
@@ -25,7 +26,7 @@ public class App {
 		System.out.println(student);
 
 		// Create a new Student
-		Student s1 = new Student(7,
+		Student s1 = new Student(9,
 				"Bill",
 				"John",
 				"Games",
@@ -61,18 +62,18 @@ public class App {
 		// Update the object we created from the database
 
 		System.out.println("Update students name");
-		Student s2 = em.find(Student.class, 7);
+		Student s2 = em.find(Student.class, 9);
 		s2.setName("William");
 		em.getTransaction().begin();
 		em.persist(s2);
 		em.getTransaction().commit();
 
-		Student student2 = em.find(Student.class, 7);
+		Student student2 = em.find(Student.class, 9);
 		System.out.println(student2);
 
         // Delete the object we created from the database
 
-		Student s3 = em.find(Student.class, 7);
+		Student s3 = em.find(Student.class, 9);
 		em.getTransaction().begin();
 		em.remove(s3);
 		em.getTransaction().commit();

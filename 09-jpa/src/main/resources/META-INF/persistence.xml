@@ -8,7 +8,7 @@
         <provider>org.hibernate.ejb.HibernatePersistence</provider>
         <class>com.jjh.students.Student</class>
         <properties>
-            <property name="hibernate.connection.url" value="jdbc:mysql://localhost/uni-database" />
+            <property name="hibernate.connection.url" value="jdbc:mysql://localhost/coursedb" />
             <property name="hibernate.connection.driver_class" value="com.mysql.cj.jdbc.Driver" />
             <property name="hibernate.connection.username" value="user" />
             <property name="hibernate.connection.password" value="user123" />
