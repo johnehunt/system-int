@@ -1,4 +1,4 @@
-# Can have comment sin schemas
+# Can have comments in schemas
 type Book {
     isbn: ID!
     title: String!
