@@ -24,7 +24,7 @@ public class ShopController {
     @GetMapping
     public Map<String, List<Book>> getBooks() {
         System.out.println("ShopService.getBooks()");
-        Map<String, List<Book>> map = new HashMap<String, List<Book>>();
+        Map<String, List<Book>> map = new HashMap<>();
         List<Book> results = (List<Book>) restTemplate.getForObject(BOOK_SERVICE_URL + "/bookshop/list", List.class);
         map.put("Technical", results);
         return map;
