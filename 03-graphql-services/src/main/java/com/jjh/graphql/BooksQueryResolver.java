@@ -19,6 +19,15 @@ public class BooksQueryResolver implements GraphQLQueryResolver {
 
 	public List<Book> getBooks(int count) {
 		System.out.println("Query.getBooks(" + count + ")");
-		return bookshop.getBooks(count);
+		if (count == -1) {
+			return bookshop.getAllBooks();
+		} else {
+			return bookshop.getBooks(count);
+		}
+	}
+
+	public List<Book> getAllbooks() {
+		System.out.println("Query.getAllBooks()");
+		return bookshop.getAllBooks();
 	}
 }

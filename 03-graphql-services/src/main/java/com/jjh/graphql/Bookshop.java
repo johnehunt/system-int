@@ -16,6 +16,10 @@ public class Bookshop {
 		books.add(new Book("987", "Henry VI", "Historical", "3"));
 	}
 
+	public List<Book> getAllBooks() {
+		return this.books;
+	}
+
 	public List<Book> getBooks(int count) {
 		System.out.println("BookDao.getBooks");
 		return books.stream().limit(count).collect(Collectors.toList());
