@@ -9,7 +9,7 @@ public class BookshopService {
         System.out.println("Starting the web application");
         SpringApplication.run(BookshopService.class, args);
         System.out.println("Startup complete");
-        System.out.println("\thttp://localhost:8080/bookshop/list");
-        System.out.println("\thttp://localhost:8080/bookshop/123");
+        System.out.println("\thttp://localhost:8080/service/book/list");
+        System.out.println("\thttp://localhost:8080/service/book/123");
     }
 }

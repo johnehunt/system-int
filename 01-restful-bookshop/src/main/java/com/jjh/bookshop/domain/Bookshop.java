@@ -2,7 +2,6 @@ package com.jjh.bookshop.domain;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class Bookshop {
     private List<Book> books = new ArrayList<>();
@@ -14,7 +13,7 @@ public class Bookshop {
     private void setup() {
         books.add(new Book("123", "Java in the Wild", "Gryff Jones", 12.55));
         books.add(new Book("124", "Enterprise Java", "Phoebe Smith", 14.55));
-        books.add(new Book("125", "Andoid Java", "Adam Byrne", 13.99));
+        books.add(new Book("125", "Android Java", "Adam Byrne", 13.99));
         books.add(new Book("126", "Java for Python Programmers", "Jasmine Davies", 10.55));
     }
 
@@ -29,6 +28,9 @@ public class Bookshop {
                         .filter(b -> b.getIsbn().equalsIgnoreCase(isbn))
                         .findFirst()
                         .orElse(null);
+        if (book == null) {
+            throw new BookNotFoundException("Missing Book");
+        }
         return book;
     }
 

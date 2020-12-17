@@ -13,7 +13,7 @@ public class Book {
         this.price = price;
     }
 
-    public Book() {}
+    public Book() {}  // Needs this
 
     public String getIsbn() {
         return isbn;
