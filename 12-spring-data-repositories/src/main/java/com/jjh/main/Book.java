@@ -1,15 +1,12 @@
 package com.jjh.main;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "books")
 public class Book {
 	
 	@Id
-	// @GeneratedValue
 	private String isbn;
 	private String author;
 	private String title;
