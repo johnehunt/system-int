@@ -5,8 +5,8 @@
     version="2.0">
     
     <persistence-unit name="StudentJPA" transaction-type="RESOURCE_LOCAL">
-        <provider>org.hibernate.ejb.HibernatePersistence</provider>
-        <class>com.jjh.students.Student</class>
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+
         <properties>
             <property name="hibernate.connection.url" value="jdbc:mysql://localhost/coursedb" />
             <property name="hibernate.connection.driver_class" value="com.mysql.cj.jdbc.Driver" />

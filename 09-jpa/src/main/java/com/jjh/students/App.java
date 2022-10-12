@@ -16,7 +16,7 @@ public class App {
 		System.out.println(em);
 
 		// Will cause a new table to be added if not already present
-		Module m = new Module(1, "OPP");
+		Module m = new Module(10, "Web Services");
 		em.getTransaction().begin();
 		em.persist(m);
 		em.getTransaction().commit();
