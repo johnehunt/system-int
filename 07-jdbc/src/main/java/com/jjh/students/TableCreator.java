@@ -15,7 +15,6 @@ public class TableCreator {
 			st.executeUpdate("CREATE TABLE addresses (name char(15), address char(3))");
 			st.executeUpdate("INSERT INTO addresses (name, address) VALUES('John', 'C46')");
 			st.close();
-			conn.close();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} 
